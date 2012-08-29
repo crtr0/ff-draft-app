@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twilio Fantasy Football Helper</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='shortcut icon' href='/images/favicon.ico' />
+  </head>
+  <body>
+    <img src='/images/football_small.png' alt='Fantasy Football Draft Room - by Twilio' />
+    <h2>Welcome to Draft Room # {{id}}</h2>
+    <input id="connect" type="button" class="btn btn-primary" value="Waiting..." disabled="disabled">
+    <input id="disconnect" type="button" class="btn" value="Disconnect" style='display:none'>
+  </body>
+  <script src='/javascripts/jquery.js'></script>
+  <script src='/javascripts/bootstrap.js'></script>
+  <script src='http://static.twilio.com/libs/twiliojs/1.0/twilio.js'></script>
+  <script type='text/javascript'>
+  $(document).ready(function() {
+
+      Twilio.Device.setup('{{token}}', {debug:true} );
+      
+      Twilio.Device.error(function (error) {
+        console.log('Error: ' + JSON.stringify(error));
+      });
+     
+      Twilio.Device.connect(function (conn) {
+        console.log('Successfully established call');
+        $('#connect').hide();
+        $('#disconnect').show();
+      });
+
+      Twilio.Device.ready(function (device) {
+        $('#connect').attr('disabled', false).attr('value', 'Connect');   
+      }); 
+
+      $('#connect').on('click', function() {
+        Twilio.Device.connect({id: '{{id}}'});
+      });
+
+      $('#disconnect').on('click', function() {
+        Twilio.Device.disconnectAll();
+        $('#connect').show();
+        $('#disconnect').hide();
+      });
+  });
+
+  </script>
+</html>

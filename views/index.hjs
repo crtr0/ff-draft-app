@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twilio Fantasy Football Helper</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='shortcut icon' href='/images/favicon.ico' />
+  </head>
+  <body>
+    <img src='/images/football_small.png' alt='Fantasy Football Draft Room - by Twilio' />
+    <p class="lead">Welcome to the Fantasy Football Draft Room, built for hackers by hackers. Powered by <a href='http://nodejitsu.com'>Nodejitsu</a>, <a href='http://redistogo.com'>RedisToGo</a> and <a href='http://twilio.com'>Twilio</a>.</p>
+    <h2>Create Draft Room</h2>
+    <p><input id="create" type="button" class="btn btn-primary" value="Create Room">
+      <input id="room_id" type="button" class="btn btn-info" value="xxxx" disabled="disabled"></p>
+    <h2>Join Draft Room</h2>
+    <form class="form-inline" method='GET' action='/room'>
+      <p><input type="text" name='id' class="input-medium" placeholder='enter id here'>
+        <button type='submit' class="btn">Go!</button></p>
+    </form>
+    <p>If you'd prefer to dial-in, please call
+      <b>(442) 3-FF-ROOM</b> and enter your room code at the prompt.</p>
+  </body>
+  <script src='/javascripts/jquery.js'></script>
+  <script src='/javascripts/bootstrap.js'></script>
+  <script>
+      $('#create').on('click', function() {
+        $.post('/room', function(data) {
+          payload = JSON.parse(data);
+          $('#room_id').attr("value", payload.id);
+          $('#create').attr('disabled', true);
+        });
+      });
+  </script>
+</html>

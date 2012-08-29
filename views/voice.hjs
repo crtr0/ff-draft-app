@@ -1,0 +1,19 @@
+<Response>
+  {{^digits}}
+  <Say>Welcome to the Fantasy Football Draft Room</Say>
+  <Pause length="1"/>
+  <Say>Brought to you by Twilio</Say>
+  <Pause length="1"/>
+  {{/digits}}
+  {{#id}}
+  <Say>Connecting you to your conference now</Say>
+  <Dial>
+    <Conference>{{id}}</Conference>
+  </Dial>
+  {{/id}}
+  {{^id}}
+  <Gather method="get" numDigits="4">
+    <Say>Please enter your 4 digit code now</Say>
+  </Gather>
+  {{/id}}
+</Response>

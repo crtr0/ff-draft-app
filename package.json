@@ -1,0 +1,21 @@
+{
+  "name": "ff-draft-room",
+  "version": "0.0.6-3",
+  "private": true,
+  "scripts": {
+    "start": "app.js"
+  },
+  "dependencies": {
+    "express": "3.0.0rc3",
+    "hjs": "*",
+    "querystring": "*",
+    "jwt-simple": "*"
+  },
+  "bundledDependencies": [
+    "redis"
+  ],
+  "subdomain": "ff-draft-room",
+  "engines": {
+    "node": "0.6.x"
+  }
+}
