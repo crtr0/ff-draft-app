@@ -9,7 +9,8 @@
   </head>
   <body>
     <img src='/images/football_small.png' alt='Fantasy Football Draft Room - by Twilio' />
-    <p class="lead">Welcome to the Fantasy Football Draft Room, built for hackers by hackers. Powered by <a href='http://nodejitsu.com'>Nodejitsu</a>, <a href='http://redistogo.com'>RedisToGo</a> and <a href='http://twilio.com'>Twilio</a>.</p>
+    <p class="lead">Welcome to the Fantasy Football Draft Room, built by
+      hackers who love fantasy football. Powered by <a href='http://nodejitsu.com'>Nodejitsu</a>, <a href='http://redistogo.com'>RedisToGo</a> and <a href='http://twilio.com'>Twilio</a>.</p>
     <h2>Create Draft Room</h2>
     <p><input id="create" type="button" class="btn btn-primary" value="Create Room">
       <input id="room_id" type="button" class="btn btn-info" value="xxxx" disabled="disabled"></p>
@@ -18,8 +19,8 @@
       <p><input type="text" name='id' class="input-medium" placeholder='enter id here'>
         <button type='submit' class="btn">Go!</button></p>
     </form>
-    <p>If you'd prefer to dial-in, please call
-      <b>(442) 3-FF-ROOM</b> and enter your room code at the prompt.</p>
+  <p>Disclaimer: conferences are limited to 14 participants and 3 hours in length.</p>
+  <a href="https://github.com/crabasa/ff-draft-app"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
   </body>
   <script src='/javascripts/jquery.js'></script>
   <script src='/javascripts/bootstrap.js'></script>

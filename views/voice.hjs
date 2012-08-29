@@ -7,8 +7,8 @@
   {{/digits}}
   {{#id}}
   <Say>Connecting you to your conference now</Say>
-  <Dial>
-    <Conference>{{id}}</Conference>
+  <Dial timeLimit="10800">
+    <Conference maxParticipants="14">{{id}}</Conference>
   </Dial>
   {{/id}}
   {{^id}}
