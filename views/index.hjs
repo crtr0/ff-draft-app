@@ -16,7 +16,7 @@
       football draft. It's free and will be up until the NFL season kicks-off on Sept 5th.</p>
     <p><input id="create" type="button" class="btn btn-primary" value="Create Room">
     <div id="room_created" style="display:none">
-    <p>Sweet, you're room has been created. The room code is:</p>
+    <p>Sweet, your room has been created. The room code is:</p>
     <div id="code"></div>
     <p>You and your friends can enter the code below to join the room. Happy drafting!</p>
     </div>
