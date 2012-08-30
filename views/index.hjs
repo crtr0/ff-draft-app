@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Twilio Fantasy Football Helper</title>
+    <title>Twilio Fantasy Football Draft Room</title>
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -10,7 +10,7 @@
   <body>
     <img src='/images/football_small.png' alt='Fantasy Football Draft Room - by Twilio' />
     <p class="lead">Welcome to the Fantasy Football Draft Room, built by
-      hackers who love fantasy football. Powered by <a href='http://nodejitsu.com'>Nodejitsu</a>, <a href='http://redistogo.com'>RedisToGo</a> and <a href='http://twilio.com'>Twilio</a>.</p>
+      hackers who love fantasy football. Powered by <a href='http://nodejitsu.com'>Nodejitsu</a>, <a href='http://redistogo.com'>RedisToGo</a> and <a href='http://www.twilio.com/client'>Twilio Client</a>. If you're a developer check-out the <a href="http://www.twilio.com/client/api">Twilio Client API</a>.</p>
     <h2>Create Draft Room</h2>
     <p>Click the button below to provision an online conference room for your fantasy
       football draft. It's free and will be up until the NFL season kicks-off on Sept 5th.</p>
