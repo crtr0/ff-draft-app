@@ -1,14 +1,14 @@
 Fantasy Football Draft Room
 ===========================
 
-Hey sports fans, welcome to my latest Node.js experiment. Check out the hosted version of the [Twilio Fantasy Football Draft Room][2].
+Hey sports fans, welcome to my latest Node.js experiment. Check out the hosted version of the [Twilio Fantasy Football Draft Room][1].
 
 Features
 --------
-* Node.js Express - [Express 3.0][4] app configured to use [Hogan.js][5] templating
-* Twilio Client - [Twilio Client][6] lets us easily spin-up conference rooms. Uses the [twilio-client-token][7] NPM module to generate the [capability tokens][8].
-* Twilio Security - Uses the [twiliosig][9] NPM module to validate that [TwiML][10] requests are coming from Twilio.
-* Redis Storage -  conference rooms codes are stored using [Redis][11]
+* Node.js Express - [Express 3.0][2] app configured to use [Hogan.js][3] templating
+* Twilio Client - [Twilio Client][4] lets us easily spin-up conference rooms. Uses the [twilio-client-token][5] NPM module to generate the [capability tokens][6].
+* Twilio Security - Uses the [twiliosig][7] NPM module to validate that [TwiML][8] requests are coming from Twilio.
+* Redis Storage -  conference rooms codes are stored using [Redis][9]
 
 Usage
 -----
@@ -39,7 +39,7 @@ Installation
 ------------
 Step-by-step instructions on getting this up and running:
 
-1) Create free accounts on [Twilio][12], [Nodejitsu][12] and [RedisToGo][13] if you don't already have them. Nodejitsu and RedisToGo are optional, feel free to swap-in similar services.
+1) Create free accounts on [Twilio][10], [Nodejitsu][11] and [RedisToGo][12] if you don't already have them. Nodejitsu and RedisToGo are optional, feel free to swap-in similar services.
 
 2) Create a new Twilio TwiML application (note the Application ID)
 
@@ -71,21 +71,21 @@ Meta
 ----
 * No warranty expressed or implied.  Software is as is. 
 * [MIT License](http://www.opensource.org/licenses/mit-license.html)
-* Built by [Twilio Seattle][15].
+* Built by [Twilio Seattle][13].
 
 
-[1]: http://twilio.com/client
-[2]: http://fantasyfootball.twilio.ly/
-[4]: http://expressjs.com/
-[5]: http://twitter.github.com/hogan.js/
-[6]: http://twilio.com/client
+
+[1]: http://fantasyfootball.twilio.ly/
+[2]: http://expressjs.com/
+[3]: http://twitter.github.com/hogan.js/
+[4]: http://twilio.com/client
+[5]: https://npmjs.org/package/twilio-client-token
+[6]: http://www.twilio.com/docs/client/capability-tokens
 [7]: https://npmjs.org/package/twiliosig
-[8]: https://npmjs.org/package/twilio-client-token
-[9]: http://www.twilio.com/docs/client/capability-tokens
-[10]: http://www.twilio.com/docs/api/twiml
-[11]: http://redis.io/
-[12]: http://www.twilio.com/try-twilio
-[13]: http://nodejitsu.com
-[14]: http://redistogo.com
-[15]: https://twitter.com/carterrabasa
+[8]: http://www.twilio.com/docs/api/twiml
+[9]: http://redis.io/
+[10]: http://www.twilio.com/try-twilio
+[11]: http://nodejitsu.com
+[12]: http://redistogo.com
+[13]: https://twitter.com/carterrabasa
 
