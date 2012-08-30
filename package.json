@@ -7,14 +7,19 @@
   },
   "dependencies": {
     "express": "3.0.0rc3",
-    "hjs": "*",
-    "querystring": "*",
-    "jwt-simple": "*"
+    "hjs": "0.0.4",
+    "querystring": "0.1.0",
+    "jwt-simple": "0.1.0",
+    "twiliosig": "0.0.3",
+    "twilio-client-token": "0.0.1"
   },
   "bundledDependencies": [
     "redis"
   ],
   "subdomain": "ff-draft-room",
+  "domains": [
+    "fantasyfootball.twilio.ly"
+  ],
   "engines": {
     "node": "0.6.x"
   }

@@ -1,8 +1,8 @@
-var TwilioCapability = require('../twilio_capability')
+var TwilioCapability = require('twilio-client-token')
   ,	redis = require("redis")
+  , twiliosig = require('twiliosig')
   , config = require('../config')
   , client = redis.createClient(config.redis.port, config.redis.url);
-
 
 client.auth(config.redis.password);
 /*
@@ -29,8 +29,14 @@ exports.room = function(req, res){
 };
 
 exports.voice = function(req, res){
-  res.header('Content-type', 'text/xml'); 
-  res.render('voice', { id: req.query.id ? req.query.id : req.query.Digits, digits: req.query.Digits });
+  if (twiliosig.valid(req, config.twilio.key)) {
+    res.header('Content-type', 'text/xml'); 
+    res.render('voice', { id: req.query.id ? req.query.id : req.query.Digits, digits: req.query.Digits });    
+  }
+  else {
+    res.status(403).send("Forbidden");
+  }
+
 };
 
 exports.create = function(req, res){
