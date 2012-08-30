@@ -12,14 +12,23 @@
     <p class="lead">Welcome to the Fantasy Football Draft Room, built by
       hackers who love fantasy football. Powered by <a href='http://nodejitsu.com'>Nodejitsu</a>, <a href='http://redistogo.com'>RedisToGo</a> and <a href='http://twilio.com'>Twilio</a>.</p>
     <h2>Create Draft Room</h2>
+    <p>Click the button below to provision an online conference room for your fantasy
+      football draft. It's free and will be up until the NFL season kicks-off on Sept 5th.</p>
     <p><input id="create" type="button" class="btn btn-primary" value="Create Room">
-      <input id="room_id" type="button" class="btn btn-info" value="xxxx" disabled="disabled"></p>
+    <div id="room_created" style="display:none">
+    <p>Sweet, you're room has been created. The room code is:</p>
+    <div id="code"></div>
+    <p>You and your friends can enter the code below to join the room. Happy drafting!</p>
+    </div>
     <h2>Join Draft Room</h2>
+    <p>If you've got a room code, enter it here to join your fantasy football draft's
+      conference room.</p>
     <form class="form-inline" method='GET' action='/room'>
       <p><input type="text" name='id' class="input-medium" placeholder='enter id here'>
         <button type='submit' class="btn">Go!</button></p>
     </form>
-  <p>Disclaimer: conferences are limited to 14 participants and 3 hours in length.</p>
+    <div id="disclaimer">
+    <p><b>Disclaimer:</b> conferences are limited to 14 participants and 3 hours in length.</p></div>
   <a href="https://github.com/crabasa/ff-draft-app"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
   </body>
   <script src='/javascripts/jquery.js'></script>
@@ -28,8 +37,9 @@
       $('#create').on('click', function() {
         $.post('/room', function(data) {
           payload = JSON.parse(data);
-          $('#room_id').attr("value", payload.id);
+          $('#code').html(payload.id);
           $('#create').attr('disabled', true);
+          $('#room_created').show();
         });
       });
   </script>

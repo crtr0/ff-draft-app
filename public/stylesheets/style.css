@@ -1,6 +1,23 @@
 body {
   width: 600px;
   margin: 20px auto;
-  text-align:center;
 }
 
+p {
+	font-size:16px;
+}
+
+#disclaimer, #issues {
+	margin-top:20px;
+}
+
+#disclaimer p, #issues p {
+	font-size: 14px;
+}
+
+#code {
+	font-size:22px;
+	color: red;
+	font-weight: bold;
+	margin:3px;
+}

@@ -8,7 +8,7 @@
   {{#id}}
   <Say>Connecting you to your conference now</Say>
   <Dial timeLimit="10800">
-    <Conference maxParticipants="14">{{id}}</Conference>
+    <Conference maxParticipants="14" waitUrl="http://twimlets.com/holdmusic?Bucket=com.twilio.music.rock">{{id}}</Conference>
   </Dial>
   {{/id}}
   {{^id}}
