@@ -71,7 +71,7 @@ Meta
 ----
 * No warranty expressed or implied.  Software is as is. 
 * [MIT License](http://www.opensource.org/licenses/mit-license.html)
-* Built by [Twilio Seattle][13].
+* Built by [Twilio Seattle][15].
 
 
 [1]: http://twilio.com/client
