@@ -27,6 +27,8 @@
     <input id="connect" type="button" class="btn btn-primary" value="Waiting..." disabled="disabled">
     <input id="disconnect" type="button" class="btn" value="Disconnect" style='display:none'>
     <div id="issues">
+    <h3>Protips</h3>
+    <p>For best results make sure your microphone is on its default setting, this will help to keep everyone's audio levels roughly equal.  Also please use headphones if possible.  This will help to avoid issues with an echo.</p> 
     <h3>Having Issues?</h3>
     <p>When you click Connect, you should see a Flash dialogue asking for permission to access your microphone and speakers.  You'll need to click on "yes" and then close this dialogue window.  If you run into other issues, please check-out our handy dandy <a href="http://www.twilio.com/help/faq/twilio-client/what-are-the-minimum-system-requirements-for-twilio-client">FAQ</a>.</p>
   </div>
