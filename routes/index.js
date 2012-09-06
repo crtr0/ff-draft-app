@@ -1,8 +1,10 @@
 var TwilioCapability = require('twilio-client-token')
   ,	redis = require("redis")
   , twiliosig = require('twiliosig')
-  , config = require('../config');
+  , config = require('../config')
+  , client = redis.createClient(config.redis.port, config.redis.url);
 
+client.auth(config.redis.password);
 
 /*
  * GET home page.
@@ -40,8 +42,7 @@ exports.voice = function(req, res){
 
 var getUniqueKey = function(callback) {
   var id = Math.floor(Math.random()*9000) + 1000;
-  var client = redis.createClient(config.redis.port, config.redis.url);
-  client.auth(config.redis.password);
+  
   client.get(id, function(err, res) {
     if (err) {
       callback(err, null);
